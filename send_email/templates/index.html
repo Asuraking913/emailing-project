@@ -5,7 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(125, 126, 128);
+    }
+
+    .box {
+        width: 450px;
+        min-height: 250px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px   ;
+    }
+
+    form p {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form p {
+        font-weight: bold;
+    }
+
+    form input {
+        /* font-weight: bold; */
+        padding: 5px;
+    }
+
+    button {
+        background-color: rgb(100, 133, 221);
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+</style>
 <body>
-    <h1>Hello World</h1>
+    <div class="box">
+
+        <form action="#" method="post">
+
+            {% csrf_token %}
+
+            <p>
+                <label for="#">Name</label>
+                <input type="text" name="name">
+            </p>
+
+            <p>
+                <label for="#">Message</label>
+                <!-- <input type="text"> -->
+                <textarea name="sms" id="" cols="30" res rows="3"></textarea>
+            </p>
+            <p>
+                <label for="#">Email</label>
+                <input type="email" name="email">
+            </p>
+
+            <button type="submit">
+                Submit
+            </button>
+        </form>
+
+    </div>
 </body>
 </html>
