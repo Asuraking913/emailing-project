@@ -18,9 +18,9 @@ def index(request):
     # send_email("emailtesting913@gmail.com", "israelshedrack913@gmail.com")
     send_mail(
         "Hello From Asura's Testing codes",
-        f"Hello there, you just received an automated email from israelshedrack913@gmail.com",
+        f"Hello there , you just received an automated email from israelshedrack913@gmail.com",
         "emailtesting913@gmail.com",
-        ["israelshedrack913@gmail.com"],
+        ["emailtesting913@gmail.com"],
         fail_silently=False,
     )
 
